@@ -3,11 +3,9 @@ $(function() {
     $(".change-sleep").on("click", function(event) {
       var id = $(this).data("id");
       var newDevoured = $(this).data("newdvoured");
-      
-      console.log("id: ", id);
-      console.log("newDevoured: ", newDevoured);
+     
   
-      var newSleepState = {
+      var newDevouredState = {
         devoured: newDevoured
       };
   
@@ -17,7 +15,6 @@ $(function() {
         data: newDevouredState
       }).then(
         function() {
-          console.log("changed devouredto", newDevoured);
           // Reload the page to get the updated list
           location.reload();
         }

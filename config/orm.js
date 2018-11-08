@@ -12,7 +12,6 @@ function printQuestionMarks(num) {
   for (var i = 0; i < num; i++) {
     arr.push("?");
   }
-
   return arr.toString();
 }
 
@@ -70,7 +69,7 @@ var orm = {
       cb(result);
     });
   },
-  //An example of objColVals
+  // An example of objColVals would be {name: panther, sleepy: true}
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -87,9 +86,8 @@ var orm = {
 
       cb(result);
     });
-  },
-  
-      }
+  }
+};
 
-// Export the orm object for the model(burger.js).
+// Export the orm object for the model (burger.js).
 module.exports = orm;
